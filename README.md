@@ -8,7 +8,6 @@ We do not provide any
 
 - **Tested only in PHP 8.1**
 - **No dictionary, or leaked passwords checks**
-- 
 
 Usage
 -----

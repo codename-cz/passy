@@ -1,6 +1,7 @@
 {
     "name": "codename-cz/passy",
     "description": "Password checker, really simple one.",
+    "keywords": ["password"],
     "type": "library",
     "license": "MIT",
     "autoload": {

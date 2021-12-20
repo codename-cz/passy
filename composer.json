@@ -1,0 +1,23 @@
+{
+    "name": "codename/passy",
+    "description": "Password checker, really simple one.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codename\\Passy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jan Daniel Dolezal",
+            "email": "dan@codename.cz"
+        }
+    ],
+    "require": {
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}

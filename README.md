@@ -4,10 +4,11 @@ Passy
 Library for scoring password complexity. 
 We have created it to be simpler than `zxcvbn` (that currently throws warnings in php 8.1).
 
-We do not provide any
+We do not provide any warranties, use at your own responsibility.
 
-- **Tested only in PHP 8.1**
-- **No dictionary, or leaked passwords checks**
+### Limitations
+- Tested only in PHP 8.1
+- No dictionary, or leaked passwords checks
 
 Usage
 -----
@@ -16,7 +17,7 @@ Usage
 $p = new Passy();
 $score = $p->score($password);
 if ($score <= 65) {
-    die('Password is too unsecure, try adding more symbols.')
+    die('Password is unsecure, try adding more symbols or use longer passphrase.')
 }
 ~~~
 
@@ -27,8 +28,20 @@ How score is calculated?
 - Unique characters are counted
 - Unique symbols are counted
 
-Final score is calculated as: `passwordLength + (10 * nonEmptyCategories) + (uniqueCharacters * 0.5) + (2 * uniqueSymbols)` floored and lowered to 100.
+Final score is calculated as: `passwordLength + (10 * nonEmptyCategories) + (uniqueCharacters * 0.5) + (2 * uniqueSymbols)` 
+floored and lowered to 100.
 
 For example `LetMeKno*w2*` gets 58.
 
+### How did we found to this formula?
+
+We have eyeballed it.
+
+## License
+
+MIT
+
+## Contributing
+
+Fill an issue, we will talk about it and then let's code!
 
